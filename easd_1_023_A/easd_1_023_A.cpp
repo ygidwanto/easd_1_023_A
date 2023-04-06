@@ -51,7 +51,7 @@ void swap(int x, int y)
 	yogi[y] = temp;
 }
 
-void q_short(int low, int high)
+void marge_sort(int low, int high)
 {
 	int pivot, i, j;
 	if (low> high)
@@ -102,9 +102,9 @@ void q_short(int low, int high)
 
 
 	//sort the list list on the left of pivot using quck sort
-	q_short(low, j - 1);                                    // Langkah 12
+	marge_sort(low, j - 1);                                    // Langkah 12
 	//Short the list on the right of pivot using quick sort
-	q_short(j + 1, high);                                   // Langkah 13
+	marge_sort(j + 1, high);                                   // Langkah 13
 
 }
 
@@ -129,7 +129,7 @@ int main()
 
 	input();
 	//Sort the array using quick sort
-	q_short(0, n - 1);
+	marge_sort(0, n - 1);
 	display();
 	system("pause");
 
